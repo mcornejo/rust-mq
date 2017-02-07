@@ -5,18 +5,6 @@ authors = ["Maksim V. <inre.storm@gmail.com>"]
 description = "RustMQ is the MQTT broker written on pure Rust."
 license = "MIT"
 keywords      = ["MQTT", "publish", "subscribe", "broker", "pubsub"]
-exclude       = [
-  ".gitignore",
-  ".travis.yml",
-  "test/**/*",
-  "tmp/**/*"
-]
-
-[workspace]
-members = [
-  "mqtt3",
-  "mqttc",
-]
 
 [[bin]]
 name = "mqttc"
@@ -33,5 +21,5 @@ openssl = { version = "0.9", features = ["v101", "v102"] }
 log = "0.3"
 env_logger = "0.3"
 url = "^1.2.4"
-"mqtt3" = { path = "mqtt3" }
-"mqttc" = { path = "mqttc" }
+"mqtt3" = { git = "https://github.com/mcornejo/rust-mqtt3.git" }
+"mqttc" = { git = "https://github.com/mcornejo/rust-mqttc.git" }
